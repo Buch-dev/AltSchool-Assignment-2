@@ -1,13 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Admin } from "./Admin";
-// import { About } from "./Components/About";
 import { FeaturedProducts } from "./Components/FeaturedProducts";
 import { Home } from "./Components/Home";
 import { Navbar } from "./Components/Navbar";
 import { NewProducts } from "./Components/NewProducts";
 import { NoMatch } from "./Components/NoMatch";
 import { OrderSummary } from "./Components/OrderSummary";
+import { Pagination1 } from "./Components/Pagination1";
 import { Products } from "./Components/Products";
 import { UserDetails } from "./UserDetails";
 import { Users } from "./Users";
@@ -34,7 +34,7 @@ function App() {
         </Route>
         <Route path="users" element={<Userspagination />}>
           <Route path=":userId" element={<UserDetails />} />
-          <Route path="usersPagination" element={<Userspagination />} />
+          <Route path="usersPagination" element={<Pagination1 />} />
           <Route path="admin" element={<Admin />} />
         </Route>
         <Route path="*" element={<NoMatch />} />
